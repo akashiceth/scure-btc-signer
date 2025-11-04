@@ -1,6 +1,6 @@
 {
-  "name": "@scure/btc-signer",
-  "version": "2.0.1",
+  "name": "@akashiceth/btc-signer",
+  "version": "2.1.0",
   "description": "Audited & minimal library for Bitcoin. Handle transactions, Schnorr, Taproot, UTXO & PSBT",
   "files": [
     "*.js",
@@ -20,6 +20,7 @@
     "@paulmillr/jsbt": "0.4.4",
     "@scure/bip32": "~2.0.0",
     "prettier": "3.6.2",
+    "release-it": "^19.0.5",
     "typescript": "5.9.2"
   },
   "scripts": {
@@ -32,7 +33,8 @@
     "test:deno": "deno --allow-env --allow-read test/index.js",
     "test:node20": "cd test; npx tsc; node compiled/test/index.js",
     "test:big": "node test/slow.test.ts",
-    "test:extended": "node --experimental-loader ./test/bitcoinjs-test/esm-loader.js ./test/bitcoinjs-test/index.test.js"
+    "test:extended": "node --experimental-loader ./test/bitcoinjs-test/esm-loader.js ./test/bitcoinjs-test/index.test.js",
+    "release": "release-it"
   },
   "exports": {
     ".": "./index.js",
